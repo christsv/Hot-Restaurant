@@ -2,7 +2,8 @@ var express = require("express");
 
 // this tells the node we are creating an 'express' server
 var app = express();
-var PORT = 3000;
+// we want a dynamic pot for HEROKU ... read the herokuguide.md number 6
+var PORT = process.env.PORT || 3000;
 
 //hanldes data parsing
 app.use(express.urlencoded({extended: true}));
